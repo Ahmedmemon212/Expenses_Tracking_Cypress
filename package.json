@@ -1,0 +1,21 @@
+{
+  "name": "okr-p1",
+  "version": "1.0.0",
+  
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "html-report": "cypress run --spec cypress/e2e/SignIn_page.cy.js --browser chrome --headed"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.4"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.1",
+    "mochawesome": "^7.1.3"
+  }
+}

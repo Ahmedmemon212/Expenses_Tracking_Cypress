@@ -1,0 +1,23 @@
+HTML REPORT USING Mochawesome Report in Cypress
+
+step1 install mocha
+
+step2 Go to Package.json file and add this line into the script tag ""html-report": "cypress run --spec cypress/e2e/SignIn_page.cy.js --browser chrome --headed" note" 
+in place of my file you should be insert you file path.
+step3 Go to Cypress.config.js file and simple paste this: 
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  reporter: 'mochawesome',
+  e2e: {
+    setupNodeEvents(on, config) {
+      // Example of setting up a node event listener
+      on('before:browser:launch', (browser, launchOptions) => {
+        // Modify browser launch options if needed
+      });
+    },
+  },
+});
+step4 Now open your terminal and run this command"npm run html-report"
+
+note: make sure in step 2 you should place correct file address and only this file is run for create the html reports 
